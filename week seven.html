@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>week seven</title>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+            font-family: Arial, sans-serif;
+        }
+        .collage-container {
+            position: relative;
+            width: 100vw;
+            height: 100vh;
+            background-image: url('wallpaper.png');
+            background-size: cover;
+            overflow: hidden;
+        }
+        .collage-item {
+            position: absolute;
+            background-color: transparent;
+            border-radius: 8px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .collage-item:hover {
+            transform: scale(1.05);
+        }
+        #item1 { top: 10%; left: 8%; width: 300px; height: 35vh; rotate: -5deg;}
+        #item2 { top: 20%; left: 40%; width: 350px; height: 20vh; rotate: 5deg;}
+        #item3 { top: 60%; left: 10%; width: 400px; height: 25vh; rotate:  0deg;}
+        #item4 { top: 30%; left: 68%; width: 20vw; height: 35vh; rotate: -5deg;}
+        #item5 { top: 70%; left: 40%; width: 30vw; height: 20vh; rotate: -2deg;}
+        #item6 { top: 80%; left: 80%; width: 20vw; height: 20vh; rotate: 0deg;}
+
+
+  .img2 {
+    position: fixed;
+    width: 200px;
+    height: 200px;
+    background-color: black;
+    color: black;
+    z-index: 999;
+  }
+
+  .img1 {
+    /* cd image */
+    position: relative;
+    left: 60px;
+    width: 200px;
+    height: 200px;
+    z-index: 800;
+    -webkit-animation: spin 2s linear infinite;
+    -webkit-animation: spin 4s linear infinite;
+    -moz-animation: spin 4s linear infinite;
+    animation: spin 4s linear infinite;
+  }
+
+  .img1 hover {
+    cursor: help;
+  }
+
+  @-moz-keyframes spin {
+    100% {
+      -moz-transform: rotate(360deg);
+    }
+  }
+
+  @-webkit-keyframes spin {
+    100% {
+      -webkit-transform: rotate(360deg);
+    }
+  }
+
+  @keyframes spin {
+    100% {
+      -webkit-transform: rotate(360deg);
+      transform: rotate(360deg);
+    }
+  }
+
+  .img1:hover {
+    /* cd stops spinning */
+    animation: pop 0.3s ease;
+  }
+
+
+    </style>
+</head>
+<body>
+    <div class="collage-container">
+        <div class="collage-item" id="item1"> <img src="w7p1.png" height="flex" width="350px"> </div>
+        <div class="collage-item" id="item2">  <img src="w7paper1.png" height="flex" width="300px"> </div>
+        <div class="collage-item" id="item3">  <img src="w7paper2.png" height="flex" width="300px"> </div>
+        <div class="collage-item" id="item4">  
+          
+          <div id="lol">
+          <img class="img2" src="https://file.garden/Zc6v_enOJ3-bBJBn/interaction-%20harmonic%20collection/w7%20album.jpeg">
+          <img class="img1" src="https://file.garden/Zc6v_enOJ3-bBJBn/interaction-%20harmonic%20collection/cd%20improved.png" width="auto" height="45px">
+      </div>
+      <script>
+          document.getElementById("lol").onclick = function() {
+              var audio = document.getElementById("audio");
+              if (audio.paused) audio.play();  // Play audio
+              else audio.pause();  // Pause audio
+          };
+      </script>
+      <audio id="audio" src=" https://file.garden/Zc6v_enOJ3-bBJBn/interaction-%20harmonic%20collection/w7%20wave.mp3"></audio>
+</div>
+
+        <div class="collage-item" id="item5">  <img src="w7p2.png" height="flex" width="350px"> </div>
+        <div class="collage-item" id="item6"><a href="week eight.html"> <img src="green button.png" height="flex" width="100px"> </a>  </div>                  
+
+    </div>
+</body>
+</html>
